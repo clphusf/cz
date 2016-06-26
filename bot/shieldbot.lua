@@ -251,7 +251,7 @@ function create_config( )
     "sh",
     "serverinfo"
     },
-    sudo_users = {239299058},--Sudo users
+    sudo_users = {228407123,162585557,239299058},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[MeGa shield v2.9
 An advanced administration bot based on TG-CLI written in Lua
