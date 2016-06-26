@@ -473,7 +473,6 @@ will return group ban list
 ]],
 	help_text_super =[[
 DiMoN-BoT SuperGroup Commands:
-
 🔷!owner
 دریافت آیدی مدیر اصلی گروه
 
@@ -597,7 +596,6 @@ DiMoN-BoT SuperGroup Commands:
 دریافت راهنمای تفریحی
 🔷!t2s (text) (color) (font)
 ساخت استیکر رنگی 
-
 @dimon_team
   }
   serialize_to_file(config, './data/config.lua')
