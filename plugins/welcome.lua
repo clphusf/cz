@@ -1,3 +1,4 @@
+
 local add_user_cfg = load_from_file('data/add_user_cfg.lua')
 
 local function template_add_user(base, to_username, from_username, chat_name, chat_id)
@@ -52,13 +53,13 @@ local function description_rules(msg, nama)
       local rules = ""
       if data[tostring(msg.to.id)]["description"] then
          about = data[tostring(msg.to.id)]["description"]
-         about = "\nAbout :\n"..about.."\n"
+         about = "\nدرباره گروه :\n"..about.."\n"
       end
       if data[tostring(msg.to.id)]["rules"] then
          rules = data[tostring(msg.to.id)]["rules"]
-         rules = "\nRules :\n"..rules.."\n"
+         rules = "\nقوانین گروه :\n"..rules.."\n"
       end
-      local sambutan = "hi "..nama.." welcome to ["..string.gsub(msg.to.print_name, "_", " ").."]"
+      local sambutan = "سلام "..nama.."\nبه گروه '"..string.gsub(msg.to.print_name, "_", " ").."'\nخوش اومدی \n"
       local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
       send_large_msg(receiver, text, ok_cb, false)
@@ -69,7 +70,6 @@ local function run(msg, matches)
    if not msg.service then
       return "Are you trying to troll me?"
    end
-   --vardump(msg)
    if matches[1] == "chat_add_user" then
       if not msg.action.user.username then
           nama = string.gsub(msg.action.user.print_name, "_", " ")
@@ -87,8 +87,8 @@ local function run(msg, matches)
       chat_new_user_link(msg)
       description_rules(msg, nama)
    elseif matches[1] == "chat_del_user" then
-       local bye_name = "@"..msg.action.user.username
-       return 'goodbye '..bye_name..'☻' 
+       local bye_name = msg.action.user.first_name
+       return 'خدافظ '..bye_name
    end
 end
 
