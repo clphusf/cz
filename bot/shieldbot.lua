@@ -251,13 +251,23 @@ function create_config( )
     "sh",
     "serverinfo"
     },
-    sudo_users = {228407123,162585557},--Sudo users
+   sudo_users = {228407123,162585557},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[MeGa shield v2.9
-An advanced administration bot based on TG-CLI written in Lua
-
-Our channels
-@dimon_team [persian]
+    about_text = [[Taylor Team v4
+    Taylor Team and Taylor Bot Anti spam / anti link
+    
+    website : 
+    taylortg.ir  ❤️
+    
+    admin : 
+    
+    @negative_officiall ❤️
+    
+    
+    channel : 
+    
+    
+    @taylor_Team ❤️
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -473,6 +483,7 @@ will return group ban list
 ]],
 	help_text_super =[[
 DiMoN-BoT SuperGroup Commands:
+
 🔷!owner
 دریافت آیدی مدیر اصلی گروه
 
@@ -596,7 +607,9 @@ DiMoN-BoT SuperGroup Commands:
 دریافت راهنمای تفریحی
 🔷!t2s (text) (color) (font)
 ساخت استیکر رنگی 
+
 @dimon_team
+]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
